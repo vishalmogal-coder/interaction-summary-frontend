@@ -6,4 +6,4 @@ Starting the App on local:
 Please note this is just the front end part. Backend/API is on another Git repo.
 
 
-To run online click [here](https://interaction-summary-frontend.herokuapp.com/)
+To run online click [here](https://interaction-summary-frontend.herokuapp.com/). This app is deployed on heroku.
