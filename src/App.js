@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
+import graph from './resources/graph.png'
 import React, { useState, useEffect } from 'react'
 function App() {
-  const  [planets,setPlanets ]= useState()
+  const  [sectors,setSectors ]= useState()
   
   useEffect(() => {
     fetch(
@@ -11,29 +12,32 @@ function App() {
                   .then((data) => {
                       //console.log(data);
                       // fetchUsers(data)
-                      setPlanets(data)
+                      setSectors(data)
                       // return data;
                   });
                 }, [])
 var ui = [];
-for (var key in planets) {
-  if (planets.hasOwnProperty(key)) {
-      console.log(key + " -> " + planets[key]);
-      ui.push(<li key={key}>{key + " -> " + planets[key]}</li>);
+for (var key in sectors) {
+  if (sectors.hasOwnProperty(key)) {
+      console.log(key + " -> " + sectors[key]);
+      // ui.push(<div className="record" key={key}><p>{key + " -> " + sectors[key]}</p></div>);
+      ui.push(<div className="record"><table><tr><td><h3>{key}</h3></td><td><h4>{sectors[key]}%</h4></td></tr></table></div>);
   }
 }
 
   return (
-    <div>
-        <h1>
-        {/* {JSON.stringify(planets)} */}
-        {/* {console.log(planets)} */}
-
+    <div className="body">
+      <header><h1>Substantive Research Interaction Dashboard</h1></header>
+      {/* <div className='record-header ui-wrapper'>
+      <table><tr><td><h2>Sector Name</h2></td><td><h2>Percentage Interaction</h2></td></tr></table>
+      </div> */}
+      <div className="ui-body">
+        <div className="ui-wrapper">
           {ui}
-
-        {/* {planets["Communication Services"]} */}
-        </h1>  
-    </div> 
+          </div>
+          <img src={graph}></img>  
+      </div>
+    </div>
   );
 }
 
