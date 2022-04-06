@@ -8,4 +8,7 @@ Please note this is just the front end part. Backend/API is on another Git repo.
 
 To run online click [here](https://interaction-summary-frontend.herokuapp.com/). This app is deployed on heroku.
 
-![image](https://user-images.githubusercontent.com/67997079/161977659-ad441344-7923-4f04-a79d-544a88f67972.png)
+Front end view 
+
+<img width="938" alt="image" src="https://user-images.githubusercontent.com/67997079/161978107-869b8ce8-6163-4fbc-b983-0dde02160775.png">
+
